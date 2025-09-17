@@ -115,5 +115,6 @@
     height: 50%;
     background: transparent;
     z-index: 2;
+    overflow: hidden;
   }
 </style>
