@@ -24,19 +24,19 @@
         <div>
             <div class="Title">Our socials</div>
             <div class="icons">
-                <a href=""><img src="src\Assets\icons8-github-512.png" alt=""></a>
-                <a href=""><img src="src\Assets\icons8-instagram-500.png" alt=""></a><br>
-                <a href=""><img src="src\Assets\icons8-facebook-500.png" alt=""></a>
-                <a href=""><img src="src\Assets\icons8-linkedin-500.png" alt=""></a><br>
-                <a href=""><img src="src\Assets\icons8-telegram-app-512.png" alt=""></a>
-                <a href=""><img src="src\Assets\icons8-whatsapp-512.png" alt=""></a>
+                <a href=""><img src="Assets\icons8-github-512.png" alt=""></a>
+                <a href=""><img src="Assets\icons8-instagram-500.png" alt=""></a><br>
+                <a href=""><img src="Assets\icons8-facebook-500.png" alt=""></a>
+                <a href=""><img src="Assets\icons8-linkedin-500.png" alt=""></a><br>
+                <a href=""><img src="Assets\icons8-telegram-app-512.png" alt=""></a>
+                <a href=""><img src="Assets\icons8-whatsapp-512.png" alt=""></a>
             </div>
         </div>  
         <div>
             <div class="Title">Do you Have any problem ? <br> Let us know</div>
             <div class="input-group">
                 <textarea placeholder="Type here"></textarea>
-                <button><img src="src\Assets\icons8-send-96.png" alt="" class="send"></button>
+                <button><img src="Assets\icons8-send-96.png" alt="" class="send"></button>
             </div>
         </div>
     </section>

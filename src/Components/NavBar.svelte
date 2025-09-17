@@ -35,7 +35,7 @@
 <Form {showForm} on:click={ClickHandeler} />
   <header id="Home">
     <nav>
-      <div class="logo"><img src="src/Assets/Apricity Logo @4x.png" alt=""></div>
+      <div class="logo"><img src="Assets/Apricity Logo @4x.png" alt=""></div>
       <button class="mobile-menu-toggle" on:click={toggleMobileMenu}>
         <span>.</span>
         <span></span>
@@ -45,7 +45,7 @@
         <button
           class="close"
           class:active={mobileMenuOpen}
-          on:click={toggleMobileMenu}><img src="src/Assets/icons8-left-96.png" alt=""></button
+          on:click={toggleMobileMenu}><img src="Assets/icons8-left-96.png" alt=""></button
         >
         <li>
           <a href="#Home" on:click={() => (mobileMenuOpen = false)}>Home</a>

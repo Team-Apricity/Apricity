@@ -35,7 +35,7 @@ onMount(() => {
 
 <div bind:this={serEl} class="container">
   <div class="title">
-    <p><img src="src/Assets/icons8-bulb-384.png" alt="" /> {Title}</p>
+    <p><img src="Assets/icons8-bulb-384.png" alt="" /> {Title}</p>
   </div>
   <div class="disc"><p>{Disc}</p></div>
 </div>

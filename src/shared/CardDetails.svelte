@@ -51,13 +51,13 @@
     </div>
     <div class="back">
       <a href={GitHub_Url} target="_blank" class="links">
-        <img src="src\Assets\icons8-github-512.png" alt="" /> {GitHub_User}</a
+        <img src="Assets\icons8-github-512.png" alt="" /> {GitHub_User}</a
       >
       <a href={Insta_Url} target="_blank" class="links">
-        <img src="src\Assets\icons8-instagram-500.png" alt="" /> {Insta_User}</a
+        <img src="Assets\icons8-instagram-500.png" alt="" /> {Insta_User}</a
       >
       <a href={LinkeIn_Url} target="_blank" class="links">
-        <img src="src\Assets\icons8-linkedin-500.png" alt="" />
+        <img src="Assets\icons8-linkedin-500.png" alt="" />
         {LinkedIn_User}</a
       >
     </div>
@@ -117,7 +117,7 @@
   }
 
   .back {
-    background-image: url("D:/Apricity/src/Images/bg.png");
+    /* background-image: url("D:/Apricity/src/Images/bg.png"); */
     border-radius: 1.8vw;
     width: 17vw;
     height: 30vw;
