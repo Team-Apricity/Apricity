@@ -1,13 +1,12 @@
 <script>
-  import ServicesDetails from "../shared/ServicesDetails.svelte";
+ 
+  let {Title, Desc} = $props()
+ import ServicesDetails from "../shared/ServicesDetails.svelte";
   import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
   import { onMount } from "svelte";
 
   gsap.registerPlugin(ScrollTrigger);
-
-  export let Title;
-  export let Disc;
 
   let serEl;
 
@@ -25,7 +24,7 @@ onMount(() => {
     x: "-19vw",
     ease: "power2.out",
   }, 0)
-  .to(serEl.querySelector(".disc"), {
+  .to(serEl.querySelector(".desc"), {
     x: "19vw",
     ease: "power2.out",
   }, 0);
@@ -37,7 +36,7 @@ onMount(() => {
   <div class="title">
     <p><img src="Assets/icons8-bulb-384.png" alt="" /> {Title}</p>
   </div>
-  <div class="disc"><p>{Disc}</p></div>
+  <div class="desc"><p>{Desc}</p></div>
 </div>
 
 <style>
@@ -68,7 +67,7 @@ onMount(() => {
     margin-right: -24vw;
   }
 
-  .disc {
+  .desc {
     position: relative;
     display: inline-block;
     right: 0;
@@ -93,7 +92,7 @@ onMount(() => {
     padding-left: 2.1vw;
   }
 
-  .disc p {
+  .desc p {
     font-family: "Poppins_Regular";
     font-size: 1.7vw;
     font-weight: 500;
@@ -104,7 +103,7 @@ onMount(() => {
     margin: 0vw 1vw;
   }
 
-  .title, .disc {
+  .title, .desc {
   will-change: transform;
 }
 
@@ -116,7 +115,7 @@ onMount(() => {
       margin: 2vw 2vw;
     }
     .title,
-    .disc {
+    .desc {
       width: 52.5vw;
       height: 15vw;
     }
@@ -124,7 +123,7 @@ onMount(() => {
       font-size: 2.4vw;
       padding-left: 1.3vw;
     }
-    .disc p {
+    .desc p {
       font-size: 1.85vw;
       padding: 0vw 3vw 0vw 13vw;
     }
@@ -149,7 +148,7 @@ onMount(() => {
       height: 22vw;
       border-radius: 4vw;
     }
-    .disc {
+    .desc {
       margin: 0;
       position: relative;
       width: 100%;
@@ -159,7 +158,7 @@ onMount(() => {
     .title p {
       font-size: 4.5vw;
     }
-    .disc p {
+    .desc p {
       padding: 8vw 2vw 0vw 3vw;
       font-size: 3vw;
     }

@@ -8,8 +8,6 @@
   import OurTeamTitle from "../Components/OurTeamTitle.svelte";
   import Card from "../Components/Card.svelte";
   import Footer from "../Components/Footer.svelte";
-  import ApricityName from "../Components/ApricityName.svelte";
-  import ShowModel from "../Components/showModel.svelte";
   import {onMount} from "svelte"
   let loading = true;
   onMount(() => {

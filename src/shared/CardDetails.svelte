@@ -1,13 +1,5 @@
-<script>
-  export let name;
-  export let job;
-  export let Insta_User;
-  export let GitHub_User;
-  export let LinkedIn_User;
-  export let GitHub_Url;
-  export let Insta_Url;
-  export let LinkeIn_Url;
-  export let Image;
+<script >
+  let {name, job, Insta_User, GitHub_User,LinkedIn_User,GitHub_Url, Insta_Url, LinkedIn_Url, Image} = $props()
   import { gsap } from "gsap";
   import { onMount } from "svelte";
 
@@ -36,7 +28,7 @@
   }
 </script>
 
-<div
+<button
   id="card-container"
   bind:this={cardEl}
   on:mouseenter={handleMouseEnter}
@@ -56,18 +48,21 @@
       <a href={Insta_Url} target="_blank" class="links">
         <img src="Assets\icons8-instagram-500.png" alt="" /> {Insta_User}</a
       >
-      <a href={LinkeIn_Url} target="_blank" class="links">
+      <a href={LinkedIn_Url} target="_blank" class="links">
         <img src="Assets\icons8-linkedin-500.png" alt="" />
         {LinkedIn_User}</a
       >
     </div>
   </div>
-</div>
+</button>
 
 <style>
-  #container {
+  #card-container {
     padding: 1vw;
+    border: none;
+    background-color: white; 
   }
+
   .card {
     position: relative;
     margin-bottom: 5vw;
@@ -95,7 +90,7 @@
     border-radius: 0.5vw;
     width: 14.3vw;
     margin-bottom: 1.5vw;
-    padding: 1.1vw 0vw 1vw 1.9vw;
+    padding: 1.1vw 1.4vw;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(0.3vw);
