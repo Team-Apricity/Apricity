@@ -2,66 +2,74 @@
   import { onMount } from "svelte";
   import { gsap } from "gsap";
   import ScrollTrigger from "gsap/ScrollTrigger";
-  import TextPlugin from "gsap/TextPlugin";
-  import SplitType from "split-type";
+  import SplitText from "gsap/SplitText";
 
-  gsap.registerPlugin(ScrollTrigger, TextPlugin);
-
-  let container;
+  gsap.registerPlugin(ScrollTrigger, SplitText);
 
   onMount(() => {
-    const paragraph = container.querySelectorAll("p");
-    const split = new SplitType(paragraph, { types: "lines" });
-
-    gsap.from(split.lines, {
-      scrollTrigger: {
-        trigger: container,
-        start: "top 40%",
-        toggleActions: "play none none none",
+    SplitText.create(".split", {
+      type: "lines, words",
+      mask: "lines",
+      autoSplit: true,
+      onSplit(self) {
+        return gsap.from(self.lines, {
+          scrollTrigger: {
+            trigger: ".content",
+            start: "top 40%",
+            toggleActions: "play none none none",
+          },
+          opacity: 0,
+          y: "50%",
+          duration: 1.5,
+          ease: "power4.out",
+          stagger: 0.2,
+        });
       },
-      opacity: 0,
-      y: "50%",
-      duration: 1.5,
-      ease: "power4.out",
-      stagger: 0.2,
     });
 
-    const about = new SplitType('.about-title', {types: 'lines'});
-    gsap.from(about.lines,{
-      scrollTrigger: {
-        trigger: container,
-        start: "top 80%",
-        toggleActions: "play none none none",
+    SplitText.create(".about-title", {
+      type: "lines, words",
+      mask: "lines",
+      autoSplit: true,
+      onSplit(self) {
+        gsap.from(self.lines, {
+          scrollTrigger: {
+            trigger: ".content",
+            start: "top 80%",
+            toggleActions: "play none none none",
+          },
+          opacity: 0,
+          y: "50%",
+          duration: 2,
+          ease: "power2.inOut",
+          stagger: 0.2,
+        });
       },
-      opacity: 0,
-      y: '50%',
-      duration:2,
-      ease: 'power2.inOut',
-      stagger: 0.2
     });
-
-});
+  });
 </script>
 
 <section id="About">
   <h2 class="about-title">About</h2>
-  <div bind:this={container} class="content">
-    <p class="space">
+  <div class="content">
+    <p class="split">
       We are a passionate tech team brought together by a shared belief in
       innovation and purposeful design. <br />
       Our agency is built on
-      <span class="highlight">creativity, dedication, and responsibility.</span
+      <span class="highlight">creativity, dedication, and responsibility</span
       ><br />
-      we deliver professional, fast, and reliable digital services with a unique
+      delevering professional, fast, and reliable digital services with a unique
       touch.
     </p>
-    <p>
-      With expertise in UI/UX design, frontend development (React & Svelte), and
+    <br /><br />
+    <p class="split">
+      With expertise in UI/UX design, frontend development mobile apps and
       backend architecture, we turn ideas into digital experiences that are
       smooth, scalable, and user-focused. <br />
       We're not just building websites....
       <span class="highlight">We're building journeys.</span>
     </p>
+    <br /><br />
   </div>
 </section>
 
@@ -87,10 +95,6 @@
     padding-right: 8.1vw;
     font-family: "Nunito_Regular";
     line-height: 2.7vw;
-  }
-
-  .space {
-    margin-bottom: 6.2vw;
   }
 
   .highlight {
@@ -131,9 +135,6 @@
     .content {
       font-size: 4.4vw;
       line-height: 7vw;
-    }
-    .space {
-      margin-bottom: 10vw;
     }
   }
 </style>

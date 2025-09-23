@@ -24,12 +24,12 @@
         <div>
             <div class="Title">Our socials</div>
             <div class="icons">
-                <a href=""><img src="Assets\icons8-github-512.png" alt=""></a>
-                <a href=""><img src="Assets\icons8-instagram-500.png" alt=""></a><br>
-                <a href=""><img src="Assets\icons8-facebook-500.png" alt=""></a>
-                <a href=""><img src="Assets\icons8-linkedin-500.png" alt=""></a><br>
-                <a href=""><img src="Assets\icons8-telegram-app-512.png" alt=""></a>
-                <a href=""><img src="Assets\icons8-whatsapp-512.png" alt=""></a>
+                <a target="_blank" href="https://github.com/Team-Apricity"><img src="Assets\icons8-github-512.png" alt="github-icon"></a>
+                <a target="_blank" href="https://www.instagram.com/teamapricity?igsh=eWMxdTJ1NDJqdXgx"><img src="Assets\icons8-instagram-500.png" alt="instagram-icon"></a><br>
+                <a target="_blank"  href="https://www.facebook.com/share/1CVq9MwrXB/"><img src="Assets\icons8-facebook-500.png" alt="facebook-icon"></a>
+                <a target="_blank" href="https://www.linkedin.com/company/team-apricity/"><img src="Assets\icons8-linkedin-500.png" alt="linkedIn-icon"></a><br>
+                <a target="_blank" href=""><img src="Assets\icons8-telegram-app-512.png" alt="telegram-icon"></a>
+                <a target="_blank" href=""><img src="Assets\icons8-whatsapp-512.png" alt="whatsapp-icon"></a>
             </div>
         </div>  
         <div>

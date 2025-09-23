@@ -1,26 +1,31 @@
 <script>
   import { onMount } from "svelte";
   import { gsap } from "gsap";
-  import SplitType from "split-type";
-  import {TextPlugin} from "gsap/TextPlugin";
+  import { SplitText } from "gsap/SplitText";
 
-  gsap.registerPlugin(TextPlugin);
+  gsap.registerPlugin(SplitText);
 
   onMount(() => {
-    const myText = new SplitType("#agency-name", { types: "chars" });
 
-    gsap.from(".char", {
-      y: 20,
-      opacity: 0,
-      stagger: 0.05,
-      delay: 0.2,
-      duration: 0.5,
-      ease: "power2.out",
+    SplitText.create("#agency-name", {
+      type: "chars",
+      mask: "lines",
+      autoSplit: true,
+      onSplit(self) {
+        return gsap.from(self.chars, {
+          y: 20,
+          opacity: 0,
+          stagger: 0.05,
+          delay: 0.2,
+          duration: 0.5,
+          ease: "power2.out",
+        });
+      },
     });
 
-    gsap.to('#agency-name',{
-        opacity:1,
-        duration:1
+    gsap.to("#agency-name", {
+      opacity: 1,
+      duration: 1,
     });
   });
 </script>
@@ -46,8 +51,8 @@
     letter-spacing: 0.01em;
   }
 
-  @media(max-width: 480px){
-    header{
+  @media (max-width: 480px) {
+    header {
       margin-top: 20vw;
     }
   }

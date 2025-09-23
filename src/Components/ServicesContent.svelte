@@ -14,13 +14,20 @@
     Desc="Custom Android & iOS applications built for performance, aesthetics, and seamless user experience."
   />
   <ServicesDetails
-    Title="Frontend Development (React & Svelte)"
+    Title="Frontend Development"
     Desc="Modern, responsive, and fast-loading frontend solutions using powerful frameworks like React and Svelte."
   />
   <ServicesDetails
     Title="Backend Development"
     Desc="Robust and scalable backend systems tailored to your business logic, with seamless API integration."
   />
+  
+  <ServicesDetails 
+  Title="Guiding & Consultaion"
+  Desc="We offer guiding serveice through our supportive team to help you march towards success" 
+  />
+
+
   <ServicesDetails
     Title="Educational Tech Content"
     Desc="We share simplified tech tutorials, coding tips, and curated programming resources for learners of all levels."
